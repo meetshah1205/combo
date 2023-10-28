@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changer</title>
+    <style>
+        #color-box {
+            width: 200px;
+            height: 200px;
+            background-color: #ccc;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="color-input" placeholder="Enter a color">
+    <div id="color-box"></div>
+
+    <script>
+        const colorInput = document.getElementById('color-input');
+        const colorBox = document.getElementById('color-box');
+
+        colorInput.addEventListener('input', () => {
+            const color = colorInput.value;
+            colorBox.style.backgroundColor = color;
+        });
+    </script>
+</body>
+</html>

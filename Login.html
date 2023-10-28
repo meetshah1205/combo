@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="This is my comboniation of files.">
+    <title>Gateway to the real Combo</title>
+    <style>
+        body {
+            font-family: Bold, Italic;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000;
+            color: #000000;
+
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            font-size: 50px;
+            color: #008000;
+            font-family: cursive;
+        }
+
+        .login-container {
+            text-align: center;
+            background-color: #008000;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input {
+            padding: 10px;
+            margin: 10px 0;
+            width: 200px;
+            border: none;
+            border-bottom: 2px dashed #fff;
+            background-color: #008000;
+            color: #fff;
+            font-size: 20px;
+            text-align: center;
+            font-family: cursive;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>Type "envixy coffee" to prove that you are a human</header>
+    <div class="login-container">
+        <h2>Login</h2>
+        <input id="password" placeholder="Enter envixy coffee">
+        <button onclick="checkPassword()">Submit</button>
+        <p id="message"></p>
+    </div>
+    
+    <script>
+        function checkPassword() {
+            const passwordInput = document.getElementById('password').value;
+            const message = document.getElementById('message');
+            
+            if (passwordInput === 'envixy coffee') {
+                message.innerHTML = 'Password is correct. You are logged in!';
+                // Redirect to another page, display a message, or perform an action
+                // For demonstration purposes, you can redirect to another page using:
+                window.location.href = 'combination_Files.html';
+             
+            } 
+            else {
+                message.innerHTML = 'Incorrect password.';
+            }
+        }
+    </script>
+</body>
+</html>
